@@ -1,0 +1,44 @@
+.backPanier{
+    display: flex;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: #ccffff;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.panier{
+    width: 80vw;
+    height: 93vh;
+    padding-top: 3%;
+    border: solid rgb(0, 217, 255);
+    background-color: rgba(0, 155, 155, 0.575);
+    text-align: center;
+}
+
+.close{
+    position: absolute;
+    right: 12.5vw;
+    top: 3.5vh;
+    font-size: 300%;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.panimg{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5%;
+    word-spacing: 50%;
+}
+
+.panimg img{
+    width: 100px;
+}
+
+.panbtn{
+    border: solid black 1px;
+    width: 5%;
+}
