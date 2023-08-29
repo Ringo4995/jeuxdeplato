@@ -16,12 +16,11 @@ const Panier = () => {
                 i = 0;
             }
         })
-        console.dir(paniertmp);
     }
     return (
         <div className="backPanier">
             <div className="panier">
-                <h2>
+                <h2 className="titre">
                     Votre Panier
                 </h2>
                 <p className="close" onClick={
@@ -41,25 +40,27 @@ const Panier = () => {
                             // sur le modèle  de mon Bouton.js je "surveille" la qte disponible pour rendre mon bouton + actif ou inactif
                             let isActiveplus = boutiqueContext.articles[valeur[0]].qte === 0 ? true : false
                             return (
-                                <div key={index}>
-                                    <span className="panimg"><img src={url} alt={name}></img></span>
-                                    <span>{name}</span>
-                                    <span>{priceu}€/unité</span>
-                                    <button className="panbtn" 
-                                    disabled = {isActiveplus}
-                                    onClick={()=>{
-                                        /* depuis le onClick sur ce bouton j'appelle la fonction decrementQte liée à mon stateArticles ( et donc mon BoutiqueContexte dans App.js )*/
-                                        boutiqueContext.decrementQte(valeur[0])
-                                    }}
-                                    >+</button>
-                                    <span>{qtea}</span>
-                                    <button className="panbtn"
-                                    onClick={()=>{
-                                        boutiqueContext.incrementQte(valeur[0])
-                                    }}
-                                    >-</button>
-                                    <span>{pricet}€</span>
-                                </div>
+                                    <div key={index} className="mesarticles">
+                                        <p className="panimg"><img src={url} alt={name}></img></p>
+                                        <p className="sousTxt">{name}</p>
+                                        <p className="sousTxt">{priceu}€/unité</p>
+                                        <div>
+                                            <button className="panbtn" 
+                                            disabled = {isActiveplus}
+                                            onClick={()=>{
+                                                /* depuis le onClick sur ce bouton j'appelle la fonction decrementQte liée à mon stateArticles ( et donc mon BoutiqueContexte dans App.js )*/
+                                                boutiqueContext.decrementQte(valeur[0])
+                                            }}
+                                            >+</button>
+                                            <span className="quantity">{qtea}</span>
+                                            <button className="panbtn"
+                                            onClick={()=>{
+                                                boutiqueContext.incrementQte(valeur[0])
+                                            }}
+                                            >-</button>
+                                        </div>
+                                        <p className="somme">{pricet}€</p>
+                                    </div>
                             )
                         })
                         :
@@ -67,7 +68,7 @@ const Panier = () => {
                 }
                 {
                     boutiqueContext.tabPanier.length > 0 ?
-                        <div>Votre total : {boutiqueContext.totalPanier}€</div>
+                        <div className="tot">Votre total : {boutiqueContext.totalPanier}€</div>
                         :
                         ""
                 }

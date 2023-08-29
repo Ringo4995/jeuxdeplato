@@ -17,6 +17,7 @@ const Bouton = (props)=>{
     return (
         <button onClick={()=>{handleClick()}}
         disabled = {isActive}
+        className='bouton'
         >Acheter</button>
     )
 }

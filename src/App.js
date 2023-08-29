@@ -92,6 +92,7 @@ function App() {
       }
     );
     // console.dir(stateArticles.tabPanier);
+    calculTotal()
   }
   function incrementQte(id) {
     let supprIndex;
@@ -101,7 +102,6 @@ function App() {
         supprIndex = index;
       }
     })
-    console.log(supprIndex);
     const tmpTabPanier = stateArticles.tabPanier;
     tmpTabPanier.splice(supprIndex, 1);
 
@@ -111,6 +111,8 @@ function App() {
         ++valeur.qte;
       }
     })
+    // une fois toutes les modifications effectuées sur mes tableaux tempiraires je peux les affecter à mes states
+
     setStateArticles(
       {
         ...stateArticles,
@@ -118,6 +120,19 @@ function App() {
         "tabPanier": tmpTabPanier
       }
     );
+    calculTotal()
+  }
+  function calculTotal(){
+    let totalTmp = 0;
+    stateArticles.tabPanier.map((valeur)=>{
+      totalTmp += stateArticles.articles[valeur].price;
+    })
+    setStateArticles(
+      {
+        ...stateArticles,
+        "totalPanier":totalTmp
+      }
+    )
   }
 
 

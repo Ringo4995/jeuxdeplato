@@ -4,7 +4,8 @@ import "./Boutique.css";
 function Boutique(props){
 
     return(
-        <section>
+        <section className="background">
+            <span className="shape"></span>
             {
                 props.articles.map((value,index)=>{
                     return(

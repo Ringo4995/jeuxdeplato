@@ -11,7 +11,7 @@ const articles = [
     {
         id: 1,
         name: "Oriflamme",
-        url: "./assets/img/oriflamme.jpg",
+        url: "./assets/img/oriflamme.png",
         price: 16,
         promo: true,
         qte: 5,
@@ -20,7 +20,7 @@ const articles = [
     {
         id: 2,
         name: "Nemesis",
-        url: "./assets/img/nemesis.jpg",
+        url: "./assets/img/nemesis.png",
         price: 140,
         promo: false,
         qte: 1,
@@ -29,7 +29,7 @@ const articles = [
     {
         id: 3,
         name: "Dune Imperium",
-        url: "./assets/img/dune_imperium.jpg",
+        url: "./assets/img/dune_imperium.png",
         price: 57,
         promo: true,
         qte: 10,
@@ -38,7 +38,7 @@ const articles = [
     {
         id: 4,
         name: "Sheriff de Nottingham",
-        url: "./assets/img/sherif.jpg",
+        url: "./assets/img/sherif.png",
         price: 54,
         promo: true,
         qte: 5,
@@ -47,7 +47,7 @@ const articles = [
     {
         id: 5,
         name: "Betrayal at the House on the Hill",
-        url: "./assets/img/bathoth.jpg",
+        url: "./assets/img/bathoth.png",
         price: 56,
         promo: false,
         qte: 2,

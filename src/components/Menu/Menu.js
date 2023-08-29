@@ -9,7 +9,7 @@ function Logo() {
     return (
         <div>
             <h1>
-                Jeux de Plat  <FontAwesomeIcon icon={faDiceD20} />
+                Jeux de Plat  <span className='de20'><FontAwesomeIcon icon={faDiceD20}/></span>
                 {/* <img src={bla}></img> (si j'ai une image directement) */}
             </h1>
         </div>
